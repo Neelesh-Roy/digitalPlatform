@@ -25,3 +25,6 @@ app.applicanceRepairView = Backbone.View.extend({
        $('.yessection').css("display", "none");
     }
  });
+
+
+//this is testing
