@@ -1,0 +1,27 @@
+{
+  "name": "gsod",
+  "version": "1.0.0",
+  "description": "POC for digital platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Neelesh-Roy/digitalPlatform.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Neelesh-Roy/digitalPlatform/issues"
+  },
+  "homepage": "https://github.com/Neelesh-Roy/digitalPlatform#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-inject": "^4.1.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-less": "^3.1.0",
+    "gulp-util": "^3.0.7",
+    "jshint-stylish": "^2.2.0"
+  }
+}
