@@ -7,4 +7,4 @@ POC for digital platform
 - To start the gulpfile and its watch tasks run `gulp`
 
 ### note
-There is no server incorporated with the gulpfile, so you have to run the project using brackets. Later, browsersync will be added to gulp tasks.
+Browsersync task has been added to the gulpfile. Please run `gulp` via command line and wait for the browsersync task to open default browser. If the default browser is IE, close it and open `localhost:3000` in google chrome. Browsersync will automatically reload browser whenever you save something in the .js and .less files
