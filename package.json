@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Neelesh-Roy/digitalPlatform#readme",
   "devDependencies": {
+    "browser-sync": "^2.13.0",
     "gulp": "^3.9.1",
     "gulp-inject": "^4.1.0",
     "gulp-jshint": "^2.0.1",

@@ -9,11 +9,11 @@ var gulp    = require('gulp'),
     gutil   = require('gulp-util'),
     less    = require('gulp-less'),
     jshint  = require('gulp-jshint'),
-    inject  = require('gulp-inject');
-
+    inject  = require('gulp-inject'),
+    bs      = require('browser-sync').create();
 // create a default task and just log a message
-gulp.task('default',['watch'], function() {
-  return gutil.log('Gulp is running!')
+gulp.task('default',['browser-sync','watch'], function() {
+  return gutil.log('Gulp is running!');
 });
 
 // less compilation task
@@ -30,19 +30,15 @@ gulp.task('jshint', function(){
     .pipe(jshint.reporter('jshint-stylish'));
 });
 
-//automatic injection of css and js files
-
-gulp.task('inject', function () {
-  var target = gulp.src('index.html');
-  var sources = gulp.src(['js/collections/*.js', 'js/models/*.js', 
-    'js/routes/*.js', 'js/templates/*.js','js/views/*.js','./css/**/*.css'],
-     {read: false});
- 
-  return target.pipe(inject(sources))
-    .pipe(gulp.dest('app'));
+gulp.task('browser-sync', function() {
+    bs.init({
+        server: {
+            baseDir: "./"
+        }
+    });
 });
 
 gulp.task('watch', function(){
   gulp.watch('js/**/*.js', ['jshint']);
-  gulp.watch('less/styles.less', ['less']);
+  gulp.watch('less/styles.less', ['less', bs.reload]);
 });
